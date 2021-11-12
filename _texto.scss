@@ -1,0 +1,71 @@
+
+ 
+  
+
+
+
+   .texto{
+    padding: 18px;
+ 
+   color: $grey;
+   font-size: 8mm;
+   font-family:' Roboto';
+   
+   border-radius: 60px;
+   display: flex;
+   justify-content:space-around;
+   margin: 30px;
+ background-image: url(img/textura.jpg);
+   background{
+    position: center;
+    color:blanchedalmond;
+
+    
+    }
+    
+text-decoration: coral;
+text-shadow: cornflowerblue;
+
+
+
+   }
+/*bem */
+.somos-texto{
+  background-color: blueviolet;
+  color: rgb(2, 0, 5);
+  background-image: url(img/textura.jpg);
+  background-position: center;
+  padding: 60px;
+ text-decoration: rosybrown;
+  text-align: center;
+  text-size-adjust: 35px;
+  border: 3px solid black;
+
+  
+ 
+
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+
+
+}
+
+
+
+  
+   .somos-texto__parrafo{
+    padding: 18px;
+ 
+   color: rgb(65, 63, 63);
+   font-size: 8mm;
+   font-family:' Roboto';
+   
+   border-radius: 60px;
+   display: flex;
+   justify-content:space-around;
+   margin: 30px;
+
+
+    }
+
