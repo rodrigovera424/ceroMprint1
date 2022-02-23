@@ -1,0 +1,61 @@
+
+
+
+
+
+    /*bem */   
+
+.flex-container  {
+        
+    flex-direction: column;
+   display:flex;
+   border: 2px solid rgb(56, 30, 11);
+   background-color: rgb(85, 87, 87);
+   justify-content: center;
+   background-image:url(img/robots1.jpg);
+   background-size: cover;
+   background-repeat: repeat;
+   background-position: center;
+
+  }
+
+  .flex-container__div{
+
+   background-color: cornflowerblue;
+   margin: 30px;
+   width: 200px;
+   font: 10px;
+   border: 3px solid black;
+
+
+
+
+
+  }
+
+    /*grids */   
+
+    .grid-container{
+      display: grid;
+      background-color: blueviolet;
+      grid-template-columns: auto auto auto;
+       justify-content:space-around;
+       background-image:url(img/tubos.jpg);
+       background-position: center;
+      
+       
+
+
+    }
+
+    .grid-container div {
+
+     
+      color: rgb(17, 43, 128);
+      text-align: center;
+      border: 3px solid black;
+      background-image: url(img/menus.jpg);
+
+
+
+    }

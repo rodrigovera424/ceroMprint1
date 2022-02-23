@@ -1,0 +1,72 @@
+.titulo {
+    
+    color: rgb(76, 67, 212);
+    font-size: 40px;
+    padding: 26px;
+    text-decoration-style: solid;
+    font-weight: bold;
+    font-family: 'Roboto';
+    background-image: url(img/robots1.jpg);
+       }
+
+
+    .subtitulo{
+        background-color: blueviolet;
+        color: rgb(2, 0, 5);
+        background-image: url(img/textura.jpg);
+        background-position: center;
+        padding: 60px;
+       text-decoration: rosybrown;
+        text-align: center;
+        text-size-adjust: 35px;
+        border: 3px solid black;
+     
+      
+       
+   
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+   
+   
+      }
+   
+
+    
+
+
+     $ancho: 720px;
+
+     $blue: #4285F4;
+     
+     $green: #33D374;
+     
+     
+     
+     .box_uno {
+     
+              background-color: $blue;
+     
+               width: $ancho/2; /* Ancho de 360*/
+     
+     }
+     
+     .box_dos {
+     
+                 background-color: $green;
+     
+                  width: ($ancho/2)-50;
+     
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
