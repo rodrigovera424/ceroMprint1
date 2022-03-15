@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quienes Somos</title>
-
+    <script src="./jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="../app.js"></script>
       <!-- Required meta tags boostrap -->
     
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +74,7 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">buscar</button>
         </form>
       </div>
     </div>
@@ -80,22 +82,164 @@
   
 
 
-
 <h2 class="somos-texto">Quienes Somos:</h2>
+
+<div class="somos-texto" id="flip">Que es la impresion 3D?</div>
+<script>
+$(document).ready(function () {
+$("#flip").click(function () {
+$("#panel").slideToggle("slow");
+});
+});
+
+</script>
+
+<div id="panel" class="somos-texto"> La impresión 3D, también llamada manufactura por adición (inglés), es un conjunto
+  de procesos que producen objetos a
+  través de la adición de material en capas que corresponden a las sucesivas secciones transversales de un modelo 3D.
+  Los
+  plásticos y las aleaciones de metal son los materiales más usados para impresión 3D, pero se puede utilizar casi
+  cualquier cosa, desde hormigón hasta tejido vivo.
+  <img src="../img/muchas.jpg" ,id="foton" position:"right" , alt="300" height="300" margin="30px">
+</div>
+
+
+<div>
+<div class="somos-texto">
+
+  <button id="fadeIn">Abrir</button>
+ 
+
+    <button id="slideDown">Desplegar</button>
     
-    <p class="somos-texto__parrafo"> 
-    <img src="../img/muchas.jpg" alt="300" height="300"  margin="30px"> 
+  
+  </div>
+    <p id="parrafo", class="somos-texto__parrafo"> 
+    <button class="somos-texto" alt="30px" id="slideUp">Contraer</button>
+
+
       La   innovación constante, una rápida respuesta al mercado y la reducción de costos, son ejes fundamentales para cualquier empresa/proyecto. La tecnología de manufactura aditiva es ideal para lograr estos objetivos y se puede implementar en varios pasos del proceso productivo. Nuestra Factory es una oportunidad de contar con un aliado estratégico para desarrollar rápidamente soluciones a medida y económicas gracias a nuestra experiencia usando la impresión 3D en varias industrias.
       Nuestro equipo técnico te puede guiar con modificaciones de diseño, materiales y configuración que maximizan las probabilidades de éxito de la pieza final y así ayudarte a llevar una idea de la primera prueba a una producción importante...
+       Estamos a disposición, contamos tu proyecto y lo que necesitás realizar.
 
-Estamos a disposición, contamos tu proyecto y lo que necesitás realizar.
-
+      
+  <button class="somos-texto", id="fadeOut">desaparecer</button>
+ 
     </p>
 
+</div>
+
+
+<button id="botonajax">boton ajax</button>
+<div id="response"></div>
+
+<script>
+  function ajax() {
+
+    const http = new XMLHttpRequest();
+    const URL = 'https://www.instagram.com/ceromprint/';
+
+    http.onreadystatechange=function(){  
+    if (this.readyState == 4 && this.status == 200) {
+
+      console.log(this.responsetext);
+      cocument.getElementById("response").innerHTML = this.responseText;
+
+    }
+
+  }
+
+  http.open("GET".url)
+  http.send();
+
+ 
+ }
+  document.getElementById("botonajax").addeverListener("Click", function () {
+    ajax(alert(gracias));
+  });
+
+///
 
 
 
 
+
+ 
+</script>
+
+<style>
+  #panel,
+  #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+</style>
+</head>
+
+<style>
+  #panel,
+  #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+</style>
+</head>
+
+<script   >  
+  {
+    $(document).ready(function () {
+      $("#fadeOut").click(function () {
+        $("#parrafo").fadeOut(3000, function () {
+          $("#fadeOut").text("fin del efecto")
+
+        });
+
+      })
+
+
+      $("#fadeIn").click(function () {
+        $("#parrafo").fadeIn(3000);
+      })
+
+      $("#slideDown").click(function () {
+        $("#parrafo").slideDown(3000);
+      })
+
+      $("#slideUp").click(function () {
+        $("#parrafo").slideUp(3000);
+      })
+
+
+    });
+
+
+  }
+
+  $(document).ready(function () {
+    $("#grande").click(function () {
+      $("#foton").animate({
+        left: '550px',
+        opacity: '0.5',
+        height: '450px',
+        width: '450px'
+      });
+    });
+  });
+</script>
 
    <!--footer-->
 
@@ -127,8 +271,8 @@ Estamos a disposición, contamos tu proyecto y lo que necesitás realizar.
    
     
 
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../app.js"></script>
 </body>
 
 

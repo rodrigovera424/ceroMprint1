@@ -81,7 +81,7 @@
     
             </li>
           </ul>
-          <form class="d-flex">
+          <form class="d-flex" >
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -137,33 +137,83 @@
         
           <div><b>Direccion:</b>Rafael Calzada</div>
 
-<!--jquery-->
+
+
+
 <!--boton -->
 
 
 
 </style>
-<form id="basic-form" action="" method="post">
+<form id="my-form" action="https://formspree.io/f/xvolrklk" method="POST">
+  <label>Email:</label>
+  <input type="email" name="email" />
+ 
+  
+  
+
+
+
   <p>
     <label for="name">Nombre <span>(+ 3 carateres)</span></label>
     <input id="name" name="name" minlength="3" type="text" required>
   </p>
   <p>
-    <label for="email">E-Mail <span>(Requerido)</span></label>
-    <input id="email" type="email" name="email" required>
+ 
   </p>
   <label for="phone">Telefono <span>(Requerido)</span></label>
   <input id="phone" type="phone" name="phone" required>
   </p>
+<label>Mensaje:</label>
+
+
+<input type="text" name="message"type="text" required />
+<br>
+<br>
   <p>
-    <input class="submit" type="submit" value="Enviar">
+    <input class="submit" type="submit" value="Enviar" id="my-form-button">
   </p>
+
+  <p id="my-form-status"></p>
 </form>
 
 
     <!--footer-->
 
 
+<!-- Place this script at the end of the body tag -->
+<script>
+  var form = document.getElementById("my-form");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Gracias por contactarse";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
 
 
 

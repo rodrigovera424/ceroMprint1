@@ -33,12 +33,16 @@ text-shadow: cornflowerblue;
    }
 /*bem */
 .somos-texto{
-  background-color: blueviolet;
+
+
+   
+   margin-right: 30px;
+  background-color: white;
   color: rgb(2, 0, 5);
   background-image: url(img/textura.jpg);
   background-position: center;
   padding: 60px;
- text-decoration: rosybrown;
+ text-decoration: grey;
   text-align: center;
   text-size-adjust: 35px;
   border: 3px solid black;
@@ -58,7 +62,7 @@ text-shadow: cornflowerblue;
   
    .somos-texto__parrafo{
     padding: 18px;
- 
+ background-image: url(./img/machine.jpg);
    color: rgb(65, 63, 63);
    font-size: 8mm;
    font-family:' Roboto';

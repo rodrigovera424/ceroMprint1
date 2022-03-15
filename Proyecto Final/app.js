@@ -1,3 +1,7 @@
+
+
+{  
+
 // Variables
 const baseDeDatos = [
     {
@@ -154,43 +158,21 @@ function calcularTotal() {
     }, 0).toFixed(2);
 }
 
-/**
- * Varia el carrito y vuelve a dibujarlo
- */
+
 function vaciarCarrito() {
-    // Limpiamos los productos guardados
+    
     carrito = [];
-    // Renderizamos los cambios
+   
     renderizarCarrito();
 }
 
-// Eventos
+
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-// Inicio
+
 renderizarProductos();
 renderizarCarrito();
 
-
-
-// (function(){
-// 	setInterval(function(){
-
-// 		var primeraLetra = document.getElementById('color-uno'),
-// 			segundaLetra = document.getElementById('color-dos'),
-
-// 		coloresDegradado = ["#a4c739","#afce52","#bbd56b","#c6dc83","#d1e39c","#ddeab5","#e8f1ce","#f4f8e6","#81c739","#5dc739","#3ac739","#39c75c","#39c77f"];
-// 		coloresSimples = ["red", "blue","yellow","cyan","green"];
-
-// 		primeraLetra.style.color = coloresDegradado[Math.floor(Math.random() * coloresDegradado.length)];
-// 		segundaLetra.style.color = coloresSimples[Math.floor(Math.random() * coloresSimples.length)];
-
-
-// 	},1000);
-// }())
-
-
-// jquery
 
 $(document).ready(function() {
   $("#basic-form").validate();
@@ -225,18 +207,34 @@ $(document).ready(function() {
   });
 
 
+  }
 
-// ]boton jquery
+{ 
+  $(document).ready(function () {
+    $("#fadeOut").click(function () {
+      $("#parrafo").fadeOut(3000, function () {
+        $("#fadeOut").text("fin del efecto")
 
-//    var x = $("document");
-//     x.ready(inicio);
+      });
 
-//     function inicio() {
-//       $("#open").click(Como llegar");
-//     }
+    })
 
-//     function mapa() {
-//       prompt(window.open("https://www.google.com/maps/place/Rafael+Calzada,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95a32cc08965339b:0x2cf32cdca0faa2cc?sa=X&ved=2ahUKEwizqImgqZP2AhU7HLkGHVnJAGIQ8gF6BAgrEAE"));
+    
+    $("#fadeIn").click(function () {
+      $("#parrafo").fadeIn(3000);
+    })
+    
+    $("#slideDown").click(function () {
+      $("#parrafo").slideDown(3000);
+    })
+
+    $("#slideUp").click(function () {
+      $("#parrafo").slideUp(3000);
+    })
+    
+    
+  });
 
 
+  }
 
